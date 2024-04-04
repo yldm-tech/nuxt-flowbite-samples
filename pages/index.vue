@@ -1,9 +1,11 @@
 <script setup lang="ts">
-import hero from "~/components/hero.vue";
-import modal from "~/components/modal.vue";
+import nav from "~/components/nav.vue";
+
+const config = useRuntimeConfig();
+console.log(config.public.API_BASE_URL); // 访问公开的环境变量
 </script>
 
 <template>
-  <hero></hero>
-  <modal></modal>
+  aaa
+  <nav></nav>
 </template>

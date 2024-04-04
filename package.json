@@ -6,9 +6,10 @@
     "build": "nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
-    "deploy":"nuxt build && nuxt generate",
-    "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "deploy": "nuxt build && nuxt generate",
+    "preview": "npm run clean && npm run build && nuxt preview",
+    "postinstall": "nuxt prepare",
+    "clean": "rimraf .nuxt .output dist"
   },
   "dependencies": {
     "flowbite": "^2.3.0",
@@ -25,10 +26,9 @@
     "@nuxtjs/tailwindcss": "^6.11.4",
     "@pinia-plugin-persistedstate/nuxt": "^1.2.0",
     "@pinia/nuxt": "^0.5.1",
-    "@vite-pwa/nuxt": "^0.6.0",
     "@vueuse/nuxt": "^10.9.0",
     "nuxt-gtag": "^2.0.5",
     "nuxt-icon": "^0.6.10",
-    "nuxt-primevue": "^0.3.1"
+    "rimraf": "^5.0.5"
   }
 }
