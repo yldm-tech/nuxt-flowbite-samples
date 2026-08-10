@@ -24,7 +24,7 @@ concurrency:
 jobs:
   # 构建工作
   build:
-    runs-on: ubuntu-latest
+    runs-on: yldm-backend-runners
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
@@ -54,7 +54,7 @@ jobs:
       name: github-pages # 部署到 GitHub Pages
       url: ${{ steps.deployment.outputs.page_url }} # 部署后的 URL
     needs: build # 郈接到构建工作
-    runs-on: ubuntu-latest # 运行环境
+    runs-on: yldm-backend-runners # 运行环境
     name: Deploy # 工作名称
     steps: # 步骤
       - name: Deploy to GitHub Pages # 部署到 GitHub Pages
